@@ -1,0 +1,20 @@
+package javase;
+
+public class supera implements Runnable{
+	Thread thread=new Thread(new supera());
+public static void main(String[] args)
+{
+	    
+}
+
+@Override
+public void run() {
+
+	
+}
+}
+
+
+
+
+

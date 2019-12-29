@@ -1,0 +1,46 @@
+package mysqlce;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class jaioxue {
+
+	public static void main(String[] args)
+	{
+		
+	
+		 Connection conn = null;
+		 Statement my;
+		 ResultSet run;
+		 PreparedStatement sql;
+		 
+		try{
+	   	 Class.forName("com.mysql.jdbc.Driver");
+	     
+	
+	    }
+	    catch(ClassNotFoundException e){
+	        //数据库驱动类异常处理
+	    }
+	   try {
+			conn=DriverManager.getConnection("jdbc:mysql://cdb-7iyyamp1.gz.tencentcdb.com:10024/text?useSSL=false & characterEnunicode=UTF8","root","19991104w");
+		
+		    
+		    my=conn.createStatement();
+		   
+		    run=my.executeQuery("select*from zifu");
+		  
+  int count = my.executeUpdate("insert into zifu values(1,1,����)");
+	 
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			
+			 
+	}
+	}
+}
